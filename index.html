@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set a background color */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Create a container with rounded corners */
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            padding: 20px;
+            opacity: 0; /* Start with opacity 0 for sliding animation */
+            transform: translateY(-50px); /* Start position above */
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        /* Style a button with rounded corners */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Add hover effect to the button */
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Create a frame or card with rounded corners */
+        .frame {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        /* Style headings */
+        h1, h2, h3 {
+            color: #333333;
+        }
+
+        /* Style paragraph text */
+        p {
+            color: #666666;
+        }
+
+        /* Rainbow LED lights effect */
+        .ui-corner {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation: rainbow 2s linear infinite;
+        }
+
+        /* Keyframes for the rainbow effect */
+        @keyframes rainbow {
+            0% { background: #ff0000; }
+            14% { background: #ff9900; }
+            28% { background: #ffff00; }
+            42% { background: #33cc33; }
+            57% { background: #3399ff; }
+            71% { background: #9900cc; }
+            85% { background: #ff3399; }
+            100% { background: #ff0000; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ui-corner" style="top: 0; left: 0;"></div>
+    <div class="ui-corner" style="top: 0; right: 0;"></div>
+    <div class="ui-corner" style="bottom: 0; left: 0;"></div>
+    <div class="ui-corner" style="bottom: 0; right: 0;"></div>
+
+    <script>
+        // JavaScript to control sliding animation on load
+        window.addEventListener("load", function () {
+            const container = document.querySelector(".container");
+            container.style.opacity = 1;
+            container.style.transform = "translateY(0)";
+        });
+    </script>
+
+    <div class="container">
+        <h1>Welcome to Your Website</h1>
+        <p>This is a basic template for your website with rounded corners, buttons, and frames. You can customize it further to meet your needs.</p>
+        <button class="button">Click Me</button>
+    </div>
+
+    <div class="frame">
+        <h2>Test Frame</h2>
+        <p>EPIC WEBSITE!!</p>
+    </div>
+
+    <div class="container">
+        <h3>Another Section</h3>
+        <p>Feel free to add more sections, content, and styles to create your unique website.</p>
+    </div>
+</body>
+</html>
